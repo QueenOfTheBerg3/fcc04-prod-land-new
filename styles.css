@@ -1,0 +1,313 @@
+:root {
+    --fixedbackgr: rgb(98, 158, 160);
+    --bodybackgr: #84d2e2;
+    --maincolor: #000000;
+    --linkbackgr: #45b9d8;
+    --linkborder: #5a6d5f;
+    --linkcolor: #050505;
+    --linkhover: #8a1726;
+    --hrfiller: #5a6d5f;
+    --h1to6backgr: #242525;
+    --h1to6color: #f8e4d9;
+    --shadow: #3bfa4d;
+    /* easy alignment: use variables */
+    --navwidth: 99%;
+    --nbarwidth: 94%;
+    --logowidth: 90%;
+    --formwidth: 80%;
+    --fieldwidth: 50%;
+    --buttonwidth: 20%;
+    --imgsize: 100px;
+    --navspace: 2.5rem;
+    --navpadd: var(--navspace); /* different for small screen (@media) */
+    --divider: 1rem;
+    --vidheight: 85vh;
+    --flexbasis:  22%; /* 4 per line */
+    --flexbasnav: 22%; /* basis for nav */
+    --prodwidth: 20%;
+}
+
+body {
+    background-color: rgb(98, 158, 160);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100%; /* default 16px - for rem  */
+    margin-top: 0;
+    padding-top: 0;
+}
+* { /* new 'default' - top margin & top padding = zero */
+    margin-top: 0;
+    padding-top: 0;
+}
+#main-div {
+    background-color: var(--bodybackgr);
+    /*background-color: yellow;*/
+    position: relative;
+    width: 100%;
+    color: var(--maincolor);
+    margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6 {
+    background-color: var(--h1to6backgr);
+    color: var(--h1to6color);
+    margin: 0.2rem auto;
+    padding: 0 0.2rem;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    font-style: oblique;
+    text-decoration: underline;
+}
+#pagetop {
+    /*background-color: orangered;*/
+    /*border: 2px dashed orangered;*/
+    margin-top: 0;
+    padding-top: var(--navpadd);
+}
+
+header {
+    /*border: 2px dashed red;*/
+    display: block;
+    position: relative;
+    width: var(--nbarwidth);
+    padding-top: 0.2rem;
+    margin: 0 auto;
+    clear: both;
+}
+.logo-line {
+    /*background-color: coral;*/
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1;
+    width: var(--logowidth);
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
+}
+
+#header-img {
+    width: var(--imgsize);
+    height: var(--imgsize);
+    padding: 0;
+    padding-bottom: 0.3rem;
+}
+#header h1 {
+    display: inline-block;
+}
+.divide, .firstdivr { /* for spacing- must make space for nav-bar */
+    background-color: var(--hrfiller);
+    width: var(--nbarwidth);
+    border-radius: var(--navspace);
+    height: var(--navspace);
+    display: block;
+    margin: 0 auto;
+    padding-top: 0;
+    clear: both;
+}
+.nav-line { /* to center the nav-bar within this div */
+    position: relative; /* base for fixed position in nav-bar */
+    margin: 0.1rem auto; 
+}
+#nav-bar {
+    position: fixed;
+    top: 0;
+    background-color: var(--fixedbackgr);
+    display: flex;
+    flex-flow: row wrap;
+    overflow:auto;
+    margin: 0 auto;
+    padding: 0;
+    align-items: center;
+    line-height: 120%;
+    width: var(--navwidth);
+    height: var(--navspace);
+    justify-content: center;
+}
+
+.nav-link {
+    background-color: var(--linkbackgr);
+    border: var(--linkborder);
+    display: block;
+    flex-basis: var(--flexbasnav);
+    margin: 0.4rem;
+    padding: 0.4rem;
+    margin-top: 0;
+    font-size:1rem;
+    text-align: center;
+}
+.nav-link:hover {
+    color: var(--linkhover);
+}
+.topofpage { /* tiny link at bottom right of screen to go to top of page */
+    position: fixed;
+    bottom:0;
+    right: 0;
+    border: 2px solid #050505;
+    color: #050505;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 2px;
+    padding: 2px;
+}
+.tips { /* another tiny link at bottom right of screen to go to tips */
+    right: 23px;
+}
+.thoughts {
+    width: 85%;
+    margin: 0.5rem auto;
+    padding: 0.2rem 1.5rem;
+}
+#products, #community, #contacter, .infowide {
+    margin: 1.5rem; /* looks nice with a bit of space around it */
+    margin-top: 0;
+}
+#prodlisting {
+    display: flex;
+    flex-flow: row wrap; /* looked up - totally forgot the flex-flow.  Did not want to use flex-direction & flex-wrap */
+    justify-content: space-evenly;
+    align-content: center;
+}
+.proditem {
+    flex-basis:  var(--flexbasis);
+    overflow: auto;
+    width: var(--prodwidth);
+    object-fit: contain;
+    margin: 0.3rem auto;
+    padding: 0.2rem;
+}
+.penguin {
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: center;
+    align-items: center;
+    margin: 0.1rem auto;
+}
+.penguin > div, .penguin > video {
+    display: inline-block;
+    flex-basis: 40%;
+}
+.penguin > div {
+    width: 40%;
+    margin: 0.5rem auto;
+}
+
+.vid-show {
+    flex-basis: 40%;
+    height: var(--vidheight);
+    width:100%;
+    object-fit:fill;
+    margin: 0.8rem auto;
+    padding: 1rem 0;
+}
+#form-div {
+    width: var(--logowidth); /* same width as logo-line */
+    margin: 0.4rem auto;
+    padding: 0;
+}
+.info h2, .info h4, .comint, #form-div h3, #form-div p {
+    width: var(--formwidth);
+    text-align: center;
+    margin: 0.4rem auto;
+    padding: 0;
+}
+#formtext {
+    width: var(--formwidth);
+    margin: 0.4rem 0;
+    padding: 0;
+}
+#form {
+    display: block;
+    border: 1px dashed var(--linkborder);
+    width: var(--formwidth);
+    margin: 0.8rem auto;
+    padding: 0.8rem;
+}
+
+input, textarea, button {
+    display: block;
+    width: 97%; /* use most of label's width (excl margin/padding) */
+    min-width: var(--fieldwidth);
+    margin: 0.4rem auto;
+    padding: 0.3rem;
+}
+.labl {
+    display: block;
+    width: var(--fieldwidth);
+    margin: 0.4rem auto;
+    padding: 0.3rem;
+}
+
+#submit {
+    display: block;
+    background-color: var(--linkbackgr);
+    color: var(--linkcolor);
+    width: var(--buttonwidth);
+    margin: 0.4rem auto;
+    padding: 0.3rem;   
+}
+
+.ready  { /* hidden procuct  element(s)- ready to add products */
+    display: none !important;
+}
+
+footer > p {
+    width: 75%;
+    margin: 0.2rem auto;
+    padding: 0.2rem 2rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+footer {
+    padding-bottom: 1.5rem;
+}
+/*  * * * * * * * * * * * *  SMALLER  SCREENS  * * * * * * * * * * * * * */
+@media only screen and (max-width:768px) { /* small screen */
+    :root {
+        --bodybackgr: #a4f2f2  ; /*a3d4f9*/
+        --h1to6backgr: #2425f5;
+        --h1to6color: #b8e4d9;
+        --linkcolor: #ff0000;
+        --linkhover: #fcfa40;
+        --logowidth: 100%;
+        --formwidth: 92%;
+        --fieldwidth: 70%;
+        --buttonwidth: 30%;
+
+        --navpadd: 0.1rem;
+
+        --imgsize: 50px;
+        --flexbasis:  80%; /* 1 per line */
+        --prodwidth: 90%;
+    }
+
+    #pagetop {
+        background-color: var(--hrfiller);
+        width: var(--nbarwidth);
+        border-radius: var(--navspace);
+        height: var(--navspace);
+        display: block;
+        margin: 0 auto;
+        clear: both;
+    }
+
+    #header {
+        background: none;
+    }
+
+    .firstdivr { /* hide first divider near top of page */
+        background: none;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    #prodlisting {
+        /*background-color: blue;*/
+        flex-flow: column nowrap;
+    }
+    footer > p {
+        width: 90%;
+    }
+}

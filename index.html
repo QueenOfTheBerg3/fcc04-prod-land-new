@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Product Landing Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+<div id="main-div">
+    <div class="infowide"><div id="pagetop"><a class="topofpage tips" href="#tiptricks" title="Tips 4 u">*</a><a class="topofpage" href="#pagetop" title="To the Top">^</a></div></div>
+    <header id="header">
+        <div class="logo-line">
+            <img id="header-img" src="https://alldisciple.com/media_gen/testuber/profile.jpg" alt="logo" />
+            <h1>Product Landing Page</h1>
+        </div>
+        <!--div id="nav-line"-->
+            <nav id="nav-bar">
+                <a class="nav-link" href="?name=#products" title="Some of our products listed">Products</a>
+                <a class="nav-link" href="?name=#community" title="Caring about the community we live and work in">Community</a>
+                <a class="nav-link" href="?name=#contacter" title="Send us a request/ enquiry/ suggestion/ chit-chat">Contact&nbsp;us</a>
+            </nav>
+        <!--/div-->
+        <div class="thoughts">
+            <p>Good health can improve our quaility of life, while living on planet Earth.<br/><br/>Some businesses see their clients as a way to earn their bread and butter.<br/>We would like you, our clients, to prosper, even as your soul prospers, no matter how much or little you spend with us.<br/><br/>Please take the time to read through our health tips.<br/>You will find them below the contact form.</p><p><em>Quick links at the Bottom Right Corner of your screen.</em></p>
+        </div>
+    </header>
+
+    <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+    <div class="info">
+        <section id="products">
+        <div class="divide notfirstdivr"><!-- hr / --></div>
+        <h4>Sample of available products.  Contact us for more info.</h4>
+        <div id="prodlisting">
+            <img class="proditem" src="https://alldisciple.com/media_gen/testuber/Battery-charge-300.jpeg" alt="Battery-charge-300" />
+            <img class="proditem" src="https://alldisciple.com/media_gen/testuber/Fan-light-350.jpeg" alt="Fan-light-350"/>
+            <img class="proditem" src="https://alldisciple.com/media_gen/testuber/Light-flood-solar-400.jpeg" alt="Light-flood-solar-400" />
+            <img class="proditem" src="https://alldisciple.com/media_gen/testuber/Light-pocket-110.jpeg" alt="Light-pocket-110"/>
+            <img class="proditem" src="https://alldisciple.com/media_gen/testuber/Light-solar-500.jpeg" alt="Light-solar-500" />
+            <img class="proditem" src="https://alldisciple.com/media_gen/testuber/OneSizeFitsAll-250.jpeg" alt="OneSizeFitsAll-250" />
+            <img class="proditem" src="https://alldisciple.com/media_gen/testuber/Power-inverter-solar-3000.jpeg" alt="Power-inverter-solar-3000" />
+            <img class="proditem" src="https://alldisciple.com/media_gen/testuber/Stove-gas-450.jpeg" alt="Stove-gas-450" />
+            <!-- ready to add more products easily- remove ' ready' (hidden) --->
+            <img class="proditem ready" src="" alt="" />
+            <img class="proditem ready" src="" alt="" />
+        </div>
+        </section>
+        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+        <section id="community">
+            <div class="divide"><!-- hr / --></div>
+            <h2>Community interest</h2>
+            <p class="comint">We not only supply helpful gadgets for your convenience, we also take an interest in our community.  <br/>Here is some cute footage from some of the locals.</p>
+            <div class="penguin">
+                <video id="video" class="vid-show" src="https://alldisciple.com/media/vidsblog/penguin-is-stuck.mp4" controls>Your browser does not support (mp4) video</video>
+                <div>
+                    <h4>Penguin where?</h4>
+                    <p>A child offers to extricate a penguin that got stuck at the docks.</p>
+                    <p>A related adult must have put the camera down and helped the penguin out of the whole.</p>
+                    <p>Therefore, the act of rescuing said penguin, with or without assistance from other bystanders, was not captured on video.</p>
+                </div>
+            </div>
+            
+            <div class="penguin">
+                <video class="vid-show" src="https://alldisciple.com/media/vidsblog/penguin-rescued.mp4" controls>Your browser does not support (mp4) video</video>
+                <div>
+                    <h4>Penguin rescued</h4>
+                    <p>Although we cannot see the actual rescue operation, mounted by one (or some) of the adults, we can deduce that said penguin was successfully rescued.</p>
+                    <p>We can only guess what antics, what ducking and diving, what hilarious events or perhaps what stressful events, might have happened during the penguin&apos;s rescue.</p>
+                </div>
+            </div>
+            
+        </section>
+        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+        
+        <section id="contacter">
+            <div class="divide" id="Contact"><!-- hr / --></div>
+            <div id="form-div">
+                <h3>Contact us</h3>
+                <form id="form" method="POST" action="https://www.freecodecamp.com/email-submit"> 
+                    <label class="labl" for="fullname">Enter name * 
+                        <input type="text" id="fullname" name="fullname" required placeholder="Firstname Surname" />
+                    </label>
+                    <label id="l1" class="labl" for="email">Enter email *
+                        <input type="email" id="email" name="email" required placeholder="someone@example.com" />
+                    </label>
+                    <label class="labl" for="comments">Optionally leave a comment 
+                        <textarea type="text" id="comments" name="comments" placeholder="Please leave helpful suggestions or issues here" rows="3" cols="40"></textarea>
+                    </label>
+                    <input type="submit" id="submit" value="Send" />
+                </form>
+                <p><a id="altmail" class="ready" href="mailto:tester@thissite.com?subject=Testing online contacter">Alternatively, send a direct mail</a></p>
+            </div> <!-- form-div -->
+        </section>
+        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+        <!-- No need for a separate section here.  Just some tips  -->
+        <div class="thoughts">
+            <div class="divide" id="tiptricks"><!-- hr / --></div>
+            <h2>Healthy living is good for you.</h2>
+            <h5>a thought for you, our valued clients</h5>
+            <p>Eating on purpose, instead of eating to feel full is a really good idea.<br/>Healthy foods are sometimes a bit more expensive, but the nutritional benefit is well worth the extra cost.<br/>A business might do a cost-benefit analysis, to decide if a venture is worth doing.<br/>Likewise, the benefit to your health, and subsequent reduction in medical bills, is well worth it.  <br/>Look at the figures. Check health costs vs medical costs.<br/><br/>Onions and garlic are natural antibiotics.<br/>Whether cooked or raw, they help your immune system to win the fight against germs, viruses and such.<br/><br/>Drink filtered or boiled water where the local water quality is below par.<br/>Cut down on the amount of sugar you have in cereal, tea and coffee.<br/>Herbal teas are refreshing and also good for your health.<br/><br/>Avoid Energy Drinks at all costs.  The caffeine levels are off the charts.  Beware!<br/><br/>Fresh fruit and veges might cost more than bread, but, as the good book says, "Man cannot live on  bread alone."<br/><br/>Water consumption is a debatable topic.  Basically, drink enough but not too much.<br/>If you feel a headache coming on, drink some water, it might be just the right solution.</p>
+            <p>Exercise is of paramount importance.  Without exercise, your body can develop all sorts of maladies.<br/>During exercise, your heart pumps faster and therefore enriches your blood with more oxygen.<br/>Muscles and joints get a bit of movement, which is good for their continued conditioning.<br/><br/>Bedridden patients often 'waste away', due to insufficient exercise.<br/>Even sitting and doing arm, leg, torso, shoulder, wrist, ankle, neck and head movements can help.<br/><br/>Be gentle with yourself.<br/>Forgive yourself and others regularly. It&apos;s not worth it to stay angry and you can harm your health if you become bitter about some or other wrong-doing.<br/>Love with a genuine, caring, self-giving kind of love - and laugh often.<br/>Laughing can release 'feel good' chemicals in your brain and combat 'anger' chemicals.<br/><br/>Be kind.  Do to others what you would like others to do to you.<br/>In short - play nice.</p>
+        </div>
+    </div> <!-- info -->
+    <footer>
+        <p>Copyright No1-in-particular</p>
+        <p>Address Nowhere-in-particular</p>
+        <br/>
+        <p>Thank you for checking out my project</p><p>&nbsp;</p>
+        <p>Note:</p>
+        <p>In my humble opinion, fixed navigation bars can be a nuisance on small screens, where the users are trying to read the information on the screen, only to find that half (or a third) of the small screen is covered by a menu.</p>
+        <p>Better by far to have a relative navigation bar for small screens with a little 'up arrow' (^) to return to the top of the screen, where the navigation bar is readily visible and available.</p>
+        <p>Having transparent navigation links is an attempt to cover as little as possible of the underlying information.  This was my solution when my original project did not pass the tests due to the relative position in the media query for #nav-bar.</p>
+        <p>I refer to:-</p>
+        <p>Your #nav-bar should <b>always</b> be at the top of the viewport.</p>
+        <p>I realise this project is to test my skills, not my ideas of 'best practice', so I modified it to match the requirements specified.</p>
+        <p>Also, while a business might well offer tips and tricks for the benefit of their clients, it would ordinarily be on a separate page, or maybe even on a subdomain.  This is, however, a Challenge project with only 1 page, so here it is, all on the Home page.</p>
+    </footer>
+</div> <!-- main-div -->
+</body>
+</html>
